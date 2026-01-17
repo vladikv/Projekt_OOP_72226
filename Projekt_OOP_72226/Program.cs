@@ -65,29 +65,38 @@ namespace Projekt_OOP_72226
                         Console.Write("ID lotu: ");
                         string flightId = Console.ReadLine();
 
-
-                        Console.Write("Imię i nazwisko: ");
-                        string name = Console.ReadLine();
-
-
-                        Console.Write("Kod rezerwacji: ");
-                        string code = Console.ReadLine();
-
-
-                        var passenger = new Passenger { Id = Guid.NewGuid().ToString(), FullName = name };
-                        passengerRepo.Add(passenger);
-
-
-                        reservationRepo.Add(new Reservation
+                        var flight = flightRepo.GetById(flightId);
+                        if (flight == null)
                         {
-                            Id = Guid.NewGuid().ToString(),
-                            ReservationCode = code,
-                            FlightId = flightId,
-                            PassengerId = passenger.Id
-                        });
+                            Console.WriteLine("Błąd: Lot o podanym ID nie istnieje.");
+                        }
+                        else if (flight.Seats <= 0)
+                        {
+                            Console.WriteLine($"Błąd: Brak wolnych miejsc na lot {flight.FlightNumber}.");
+                        }
+                        else
+                        {
+                            Console.Write("Imię i nazwisko: ");
+                            string name = Console.ReadLine();
+                            Console.Write("Kod rezerwacji: ");
+                            string code = Console.ReadLine();
+
+                            var passenger = new Passenger { Id = Guid.NewGuid().ToString(), FullName = name };
+                            passengerRepo.Add(passenger);
+
+                            reservationRepo.Add(new Reservation
+                            {
+                                Id = Guid.NewGuid().ToString(),
+                                ReservationCode = code,
+                                FlightId = flightId,
+                                PassengerId = passenger.Id
+                            });
 
 
-                        Console.WriteLine("Rezerwacja wykonana.");
+                            flightRepo.UpdateSeats(flightId, -1);
+
+                            Console.WriteLine("Rezerwacja wykonana. Miejsce zostało zarezerwowane.");
+                        }
                         break;
 
 
@@ -96,6 +105,10 @@ namespace Projekt_OOP_72226
                         string reservationCode = Console.ReadLine();
                         reservationRepo.Remove(reservationCode);
 
+                        Console.Write("ID lotu: ");
+                        flightId = Console.ReadLine();
+
+                        flightRepo.UpdateSeats(flightId, 1);
 
                         Console.WriteLine("Rezerwacja anulowana.");
                         break;
@@ -116,5 +129,7 @@ namespace Projekt_OOP_72226
                 }
             }
         }
-    }   
+    }
+
+   
 }

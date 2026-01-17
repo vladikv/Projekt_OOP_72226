@@ -71,5 +71,18 @@ namespace Projekt_OOP_72226.Repositories
 
             return list;
         }
+
+        
+        public string GetFlightIdByCode(string code)
+        {
+            using (var conn = Database.GetConnection())
+            using (var cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT FlightId FROM Reservations WHERE ReservationCode = @code";
+                cmd.Parameters.AddWithValue("@code", code);
+                var result = cmd.ExecuteScalar();
+                return result?.ToString(); 
+            }
+        }
     }
 }
