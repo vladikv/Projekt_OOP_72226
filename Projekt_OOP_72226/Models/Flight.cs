@@ -16,7 +16,6 @@ namespace Projekt_OOP_72226.Models
         public int Seats { get; set; }
         public double Price { get; set; }
 
-
         public override string ToString()
         => $"[{Id}] {FlightNumber} | {FromCity} -> {ToCity} | {Date} | {Seats} miejsc | {Price} zł";
     }

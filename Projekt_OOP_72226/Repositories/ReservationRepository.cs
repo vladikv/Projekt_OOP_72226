@@ -9,6 +9,30 @@ namespace Projekt_OOP_72226.Repositories
 {
     public class ReservationRepository
     {
+        public Reservation Reservation
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Database Database
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Reservation Reservation1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void Add(Reservation r)
         {
             using (var conn = Database.GetConnection())

@@ -12,5 +12,37 @@ namespace Projekt_OOP_72226.Models
         public string ReservationCode { get; set; }
         public string FlightId { get; set; }
         public string PassengerId { get; set; }
+
+        public Flight Flight
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Passenger Passenger
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Passenger Passenger1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Flight Flight1
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

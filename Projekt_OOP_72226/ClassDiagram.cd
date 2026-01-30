@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Projekt_OOP_72226.Program" Collapsed="true">
+    <Position X="8" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_OOP_72226.FlightRepository" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <AssociationLine Name="Flight1" Type="Projekt_OOP_72226.Models.Flight">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-16.869" Y="-0.159" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Database" Type="Projekt_OOP_72226.Database">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-10.961" Y="-2.719" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAEACAAAAAAAAAgAAAAAggIA=</HashCode>
+      <FileName>Repositories\FlightRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Flight1" />
+      <Property Name="Database" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projekt_OOP_72226.Database" Collapsed="true">
+    <Position X="8" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAEAAAAAAAAAAAAABAAAAABAAAAA=</HashCode>
+      <FileName>Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_OOP_72226.Models.Flight" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAEAgAAAAAAACAAAAAJAAAEAAAAAAA=</HashCode>
+      <FileName>Models\Flight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_OOP_72226.Models.Passenger" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Passenger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_OOP_72226.Models.Reservation" Collapsed="true">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <AssociationLine Name="Passenger1" Type="Projekt_OOP_72226.Models.Passenger">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-13.328" Y="-0.273" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Flight1" Type="Projekt_OOP_72226.Models.Flight">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="16.183" Y="0.8" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAEAAAgFAAAAAAAAAAAAAoBA=</HashCode>
+      <FileName>Models\Reservation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Passenger1" />
+      <Property Name="Flight1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projekt_OOP_72226.Repositories.PassengerRepository" Collapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <AssociationLine Name="Passenger1" Type="Projekt_OOP_72226.Models.Passenger">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-11.703" Y="1.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Database" Type="Projekt_OOP_72226.Database">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="13.016" Y="0.477" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAIBA=</HashCode>
+      <FileName>Repositories\PassengerRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Passenger1" />
+      <Property Name="Database" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projekt_OOP_72226.Repositories.ReservationRepository" Collapsed="true">
+    <Position X="8" Y="4" Width="1.5" />
+    <AssociationLine Name="Reservation1" Type="Projekt_OOP_72226.Models.Reservation">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-13.546" Y="1.3" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Database" Type="Projekt_OOP_72226.Database">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-14.078" Y="-1.357" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAAAAEACABAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ReservationRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Database" />
+      <Property Name="Reservation1" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

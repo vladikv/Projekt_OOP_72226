@@ -10,6 +10,7 @@ namespace Projekt_OOP_72226.Models
     {
         public string Id { get; set; }
         public string FullName { get; set; }
+
         public override string ToString() => FullName;
     }
 }

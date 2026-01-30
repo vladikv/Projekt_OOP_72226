@@ -8,6 +8,30 @@ namespace Projekt_OOP_72226
 {
     public class FlightRepository
     {
+        public Flight Flight
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Flight Flight1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Database Database
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public List<Flight> GetAll()
         {
             var list = new List<Flight>();

@@ -4,11 +4,10 @@ using System;
 
 namespace Projekt_OOP_72226
 {
-    public static class Database
+    public class Database
     {
         private const string DB_NAME = @"Data Source=VLADOS;Initial Catalog=Projekt_OOP;
                                         Integrated Security=True;Encrypt=False;TrustServerCertificate=True;";
-
 
         public static SqlConnection GetConnection()
         {

@@ -201,6 +201,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="appsettings.json" />
+    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
